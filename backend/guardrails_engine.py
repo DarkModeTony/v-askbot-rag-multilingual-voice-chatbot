@@ -64,7 +64,7 @@ class GuardrailsEngine:
                 'sufficient': False,
                 'top_score': top_score,
                 'action': 'TRIGGER_REFUSAL',
-                'reason': f"Low retrieval relevance score ({top_score:.3f} < {SIMILARITY_THRESHOLD:.2f})"
+                'reason': f"Low retrieval relevance score ({top_score:.2f})"
             }
 
         top_chunk = retrieved_chunks[0]
@@ -101,7 +101,6 @@ class GuardrailsEngine:
 
         matches = sum(1 for token in ans_tokens if token in combined_context)
         score = min(1.0, (matches / len(ans_tokens)) * 1.30)
-
         is_grounded = score >= GUARDRAIL_GROUNDEDNESS_THRESHOLD
 
         return {
@@ -110,9 +109,8 @@ class GuardrailsEngine:
             'hallucination_detected': not is_grounded,
             'verdict': 'PASSED_GROUNDED' if is_grounded else 'FAILED_HALLUCINATION_RISK'
         }
-
     def generate_refusal_message(self, language: str = 'en') -> str:
-        refusals = {
+        refusals = { 
             'en': 'I do not have sufficient verified context in the MSMARCO-XI dataset to answer this question accurately.',
             'hi': 'मेरे पास इस प्रश्न का सटीक उत्तर देने के लिए MSMARCO-XI डेटासेट में पर्याप्त सत्यापित संदर्भ नहीं है।',
             'bn': 'এই প্রশ্নের সঠিক উত্তর দেওয়ার মতো পর্যাপ্ত যাচাইকৃত তথ্য MSMARCO-XI ডেটাসেটে নেই।',
