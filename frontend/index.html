@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-askbot | Hacker House Goa 2026 Voice-Enabled Multilingual RAG</title>
+    <!-- HackerHouse Goa / Devfolio typography: Nunito Sans, Montserrat, Space Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=20260820-2">
+</head>
+<body>
+    <!-- Devfolio-style Top Navigation Header -->
+    <header class="hhg-header">
+        <div class="hhg-container nav-container">
+            <div class="nav-brand">
+                <div class="brand-logo-pill">
+                    <span class="brand-geo">GOA</span>
+                    <span class="brand-year">2026</span>
+                </div>
+                <div class="brand-titles">
+                    <h1 class="brand-title">HACKER HOUSE GOA</h1>
+                    <span class="brand-subtitle">v-askbot: Voice & Multilingual RAG Assistant</span>
+                </div>
+            </div>
+            
+            <div class="nav-badges">
+                <span class="status-pill live-pill">
+                    <span class="pulse-dot"></span> Sarvam Translate + Groq RAG Live
+                </span>
+                <span class="dataset-pill">
+                    AUTO HYBRID: DATASET → WEB
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Builder Layout -->
+    <main class="hhg-container main-content">
+        <!-- Hero & Track Introduction Card -->
+        <section class="hhg-card hero-card">
+            <div class="hero-header">
+                <div class="hero-tag">TASK 2 • VOICE-ENABLED MULTILINGUAL RAG</div>
+                <h2 class="hero-title">Sub-200ms Indic Voice Knowledge Retrieval</h2>
+                    <p class="hero-description">
+                    Speak or type in any Indian language. <strong>Sarvam AI</strong> powers bi-directional translation, while <strong>Groq</strong> answers from MSMARCO-XI first and automatically searches the web when the dataset does not contain enough context.
+                </p>
+            </div>
+
+            <!-- Pipeline Architecture Flow Banner -->
+            <div class="pipeline-flow-banner">
+                <div class="flow-step">
+                    <div class="step-num">01</div>
+                    <div class="step-info">
+                        <div class="step-name">Voice / Text Input</div>
+                        <div class="step-tech">11+ Indic Languages</div>
+                    </div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step highlight-step">
+                    <div class="step-num">02</div>
+                    <div class="step-info">
+                        <div class="step-name">Sarvam Translate</div>
+                        <div class="step-tech">Indic → English Query</div>
+                    </div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step highlight-step-groq">
+                    <div class="step-num">03</div>
+                    <div class="step-info">
+                        <div class="step-name">Groq + SIMD Vector DB</div>
+                        <div class="step-tech">5 Vast Chunking Strats</div>
+                    </div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step highlight-step">
+                    <div class="step-num">04</div>
+                    <div class="step-info">
+                        <div class="step-name">Sarvam Translate</div>
+                        <div class="step-tech">English → Native Voice/Text</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Playground Grid -->
+        <div class="builder-grid">
+            <!-- Left Column: Input & Controls -->
+            <div class="builder-col control-col">
+                <section class="hhg-card">
+                    <div class="card-header">
+                        <h3 class="card-title">1. Language & Configuration</h3>
+                        <span class="card-badge">Step 1</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="languageSelect">Input Language (Sarvam Auto-Routed)</label>
+                        <select id="languageSelect" class="hhg-select">
+                            <option value="hi" selected>हिन्दी (Hindi)</option>
+                            <option value="bn">বাংলা (Bengali)</option>
+                            <option value="en">English (Global)</option>
+                            <option value="te">తెలుగు (Telugu)</option>
+                            <option value="ta">தமிழ் (Tamil)</option>
+                            <option value="mr">मराठी (Marathi)</option>
+                            <option value="gu">ગુજરાતી (Gujarati)</option>
+                            <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                            <option value="ml">മലയാളം (Malayalam)</option>
+                            <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                            <option value="or">ଓଡ଼ିଆ (Odia)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="strategySelect">Chunking & Retrieval Strategy</label>
+                        <select id="strategySelect" class="hhg-select">
+                            <option value="recursive_semantic" selected>Recursive Semantic (Sentence Boundary)</option>
+                            <option value="metadata_aware">Metadata-Aware Contextual (Hierarchy)</option>
+                            <option value="parent_document_hierarchical">Parent-Document (Child Vectors)</option>
+                            <option value="contextual_sentence_window">Contextual Sentence-Window</option>
+                            <option value="fixed_size_overlap">Fixed-Size with Sliding Overlap</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Preset Query Samples (MSMARCO-XI)</label>
+                        <div class="preset-chips" id="presetChips">
+                            <!-- Injected dynamically based on language -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Voice & Text Query Card -->
+                <section class="hhg-card interactive-query-card">
+                    <div class="card-header">
+                        <h3 class="card-title">2. Voice / Text Query</h3>
+                        <span class="card-badge">Step 2</span>
+                    </div>
+
+                    <div class="voice-hero-zone">
+                        <button id="micButton" class="hhg-mic-button" title="Click to Speak">
+                            <div class="mic-icon-wrap">
+                                <svg class="mic-svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                                    <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                                </svg>
+                            </div>
+                            <span class="mic-status-label" id="micStatusLabel">Click Mic to Speak in Selected Language</span>
+                        </button>
+                    </div>
+
+                    <div class="or-divider"><span>OR TYPE YOUR QUERY</span></div>
+
+                    <div class="text-input-area">
+                        <textarea id="queryInput" class="hhg-textarea" rows="3" placeholder="Type your question in Hindi, Bengali, Tamil, Telugu, English, etc..."></textarea>
+                        <button id="submitQueryBtn" class="hhg-btn-primary">
+                            <span>Execute Sub-200ms RAG</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Results & Telemetry -->
+            <div class="builder-col result-col">
+                <!-- Translation & Pipeline Execution HUD -->
+                <section class="hhg-card result-display-card">
+                    <div class="card-header">
+                        <h3 class="card-title">3. Multilingual Answer & Translation Lineage</h3>
+                        <div class="header-tools" id="audioPlaybackTool">
+                            <button id="speakAnswerBtn" class="hhg-btn-secondary btn-sm" disabled>
+                                🔊 Listen (TTS)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pipeline Steps Visualizer (Live State) -->
+                    <div class="pipeline-live-tracker" id="pipelineTracker">
+                        <div class="tracker-node" id="nodeInput">
+                            <div class="node-dot"></div>
+                            <div class="node-text">Native Input</div>
+                        </div>
+                        <div class="tracker-line"></div>
+                        <div class="tracker-node" id="nodeTranslateIn">
+                            <div class="node-dot"></div>
+                            <div class="node-text">Sarvam EN Trans</div>
+                        </div>
+                        <div class="tracker-line"></div>
+                        <div class="tracker-node" id="nodeGroq">
+                            <div class="node-dot"></div>
+                            <div class="node-text">Groq RAG + SIMD</div>
+                        </div>
+                        <div class="tracker-line"></div>
+                        <div class="tracker-node" id="nodeTranslateOut">
+                            <div class="node-dot"></div>
+                            <div class="node-text">Sarvam Native Trans</div>
+                        </div>
+                    </div>
+
+                    <!-- Translation Breakdown Inspection Box -->
+                    <div class="translation-inspection-box" id="translationBox" style="display: none;">
+                        <div class="trans-pill-row">
+                            <span class="trans-tag">🌐 Sarvam Translation Lineage</span>
+                            <span class="trans-latency" id="transLatencyBadge">-- ms</span>
+                        </div>
+                        <div class="trans-grid">
+                            <div class="trans-col">
+                                <div class="trans-label">Translated to English for Groq:</div>
+                                <div class="trans-text" id="englishQueryText">--</div>
+                            </div>
+                            <div class="trans-col">
+                                <div class="trans-label">Groq English Raw Answer:</div>
+                                <div class="trans-text" id="englishAnswerText">--</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Answer Container -->
+                    <div class="final-answer-container">
+                        <div class="answer-label">Official Answer (in your language):</div>
+                        <div class="answer-content-box" id="answerContent">
+                            <p class="placeholder-text">Ask a question or click a preset sample above to trigger the pipeline.</p>
+                        </div>
+                    </div>
+
+                    <!-- Guardrail & Confidence Status Bar -->
+                    <div class="guardrail-status-bar" id="guardrailBar">
+                        <div class="status-item">
+                            <span class="status-label">Guardrail Status:</span>
+                            <span class="status-value status-badge-clean" id="guardrailStatus">READY</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Groundedness:</span>
+                            <span class="status-value font-mono" id="groundedScore">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Total Latency:</span>
+                            <span class="status-value font-mono font-bold" id="totalLatency">-- ms</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Grounded Citations & Sources Card -->
+                <section class="hhg-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Retrieved MSMARCO-XI Evidence & Citations</h3>
+                        <span class="card-badge" id="citationsCountBadge">0 Sources</span>
+                    </div>
+                    <div class="citations-list" id="citationsList">
+                        <div class="empty-citations">No retrieval executed yet. Vector similarity search executes in &lt; 5ms.</div>
+                    </div>
+                </section>
+
+                <!-- Precision Latency Telemetry Waterfall -->
+                <section class="hhg-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Sub-200ms Latency Breakdown Waterfall</h3>
+                        <span class="card-badge badge-green">P50 / P70 / P100 Analytics</span>
+                    </div>
+
+                    <div class="latency-waterfall" id="latencyWaterfall">
+                        <div class="waterfall-bar-row">
+                            <span class="wf-label">Sarvam Input Trans:</span>
+                            <div class="wf-bar-wrap"><div class="wf-bar bar-trans" id="barTransIn" style="width: 0%"></div></div>
+                            <span class="wf-val" id="valTransIn">0.0ms</span>
+                        </div>
+                        <div class="waterfall-bar-row">
+                            <span class="wf-label">Vector Retrieval:</span>
+                            <div class="wf-bar-wrap"><div class="wf-bar bar-vector" id="barVector" style="width: 0%"></div></div>
+                            <span class="wf-val" id="valVector">0.0ms</span>
+                        </div>
+                        <div class="waterfall-bar-row">
+                            <span class="wf-label">Groq LLM Generation:</span>
+                            <div class="wf-bar-wrap"><div class="wf-bar bar-groq" id="barGroq" style="width: 0%"></div></div>
+                            <span class="wf-val" id="valGroq">0.0ms</span>
+                        </div>
+                        <div class="waterfall-bar-row">
+                            <span class="wf-label">Sarvam Output Trans:</span>
+                            <div class="wf-bar-wrap"><div class="wf-bar bar-trans" id="barTransOut" style="width: 0%"></div></div>
+                            <span class="wf-val" id="valTransOut">0.0ms</span>
+                        </div>
+                        <div class="waterfall-bar-row">
+                            <span class="wf-label">Guardrail Verification:</span>
+                            <div class="wf-bar-wrap"><div class="wf-bar bar-guard" id="barGuard" style="width: 0%"></div></div>
+                            <span class="wf-val" id="valGuard">0.0ms</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Vast Chunking Strategy Comparison Section -->
+        <section class="hhg-card comparison-card">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Vast Chunking Strategy Workbench</h3>
+                    <p class="card-subtitle">Evaluate and compare all 5 chunking algorithms across granularity, variance, and context retention.</p>
+                </div>
+                <button id="compareStrategiesBtn" class="hhg-btn-secondary">
+                    Analyze 5 Strategies
+                </button>
+            </div>
+
+            <div class="comparison-grid" id="comparisonGrid">
+                <!-- Dynamically populated comparison cards -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Submission Info -->
+    <footer class="hhg-footer">
+        <div class="hhg-container footer-content">
+            <div class="footer-left">
+                <strong>Hacker House Goa 2026</strong> • Shortlisting Task 2: Voice-Enabled Multilingual RAG
+            </div>
+            <div class="footer-right">
+                <span>Dataset: <code>ai4bharat/MSMARCO-XI</code></span>
+                <span>Powered by: <strong>Sarvam AI</strong> + <strong>Groq LLaMA</strong></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js?v=20260820-voice7"></script>
+</body>
+</html>
