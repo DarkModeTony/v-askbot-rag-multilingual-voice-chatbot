@@ -95,8 +95,3 @@ Online answers are labeled `ONLINE_SEARCH_RESULT_UNVERIFIED` because they are no
 
 ---
 
-## 📹 Video Submission Guidelines (#RAGInGoa)
-
-- **Video 1 (Process)**: 90-second video demonstrating team workflow and development.
-- **Video 2 (Demo)**: End-to-end voice query demonstration showing live transcription, sub-200ms latency HUD, and multilingual answers.
-- **Social Tags**: Every team member must post both videos on Instagram & X with **`#RAGInGoa`**.
